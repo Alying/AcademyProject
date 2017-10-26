@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Me</title>
+</head>
+<style>
+	body{
+		background-color: #9bddff;
+	}
+	h1 {
+		color: pink;
+	}
+</style>
+<body>
+	<h1>A Header</h1>
+	<h2>2nd Header</h2>
+	<div>
+		<ul>
+			{% for i in range(10) %}
+			{% if i%2==0 %}
+			<li style="color:purple">item{{i}}</li>
+			{% else %}
+			<li>item{{i}}</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+	<p>Just a paragraph.</p>	
+	<form>
+		<label for="Pretty?"> Pretty? </label>
+		<input type="text" name="name" id="name">
+	</form>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
